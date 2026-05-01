@@ -1,3 +1,4 @@
+
 ### 04/28/2026
 ### Samuel Vargas
 ### This is a program that grabs the text from the Analogman King of Tone Waitlist website and outputs info as to who gets to place an order for a KoT based on the date they got on the waitlist
@@ -20,6 +21,8 @@ def main():
     intel_bytes = page.read()
     web_page = intel_bytes.decode("utf-8")
     print(web_page) ## for debugging
+
+    ## Test Line
 
 
 main
