@@ -14,16 +14,25 @@ from urllib.request import urlopen
 
 def main():
 
+    ### This section grabs the text from the Analogman KoT page and turns it into data
+
     url = "https://www.analogman.com/kotdelay.htm"
     page = urlopen(url)
-    print(page) ## for debugging
 
-    intel_bytes = page.read()
-    web_page = intel_bytes.decode("utf-8")
-    print(web_page) ## for debugging
+    html_bytes = page.read()
+    web_page = html_bytes.decode("utf-8")
+    web_page = BeautifulSoup(web_page, 'html.parser')
 
-    ## Test Line
-    ## Test Line 2
+    ### Turns processed web page data into a string
+    text = web_page.find('p')
+    text = text.get_text()
+
+    ### Truncates text string and gives final output
+    start_index = text.find('K')
+    end_index = 135 + 1
+    print(text[start_index: end_index])
 
 
-main
+
+
+main()
