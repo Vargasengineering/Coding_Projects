@@ -34,6 +34,8 @@ def main():
     print(text[start_index: end_index])
     print('\n')
 
+    ### end_index value was acquired through experimentation using text.find()
+
 
 
 
