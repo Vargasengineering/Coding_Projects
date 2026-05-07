@@ -30,7 +30,9 @@ def main():
     ### Truncates text string and gives final output
     start_index = text.find('K')
     end_index = 135 + 1
+    print('\n')
     print(text[start_index: end_index])
+    print('\n')
 
 
 
